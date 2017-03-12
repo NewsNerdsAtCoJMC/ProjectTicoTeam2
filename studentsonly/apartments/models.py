@@ -28,6 +28,8 @@ class Building(models.Model):
 	name = models.CharField(max_length=255)
 	address = models.CharField(max_length=255)
 	contactInfo = models.CharField(max_length=255)
+	distanceToCity = models.BooleanField()
+	distanceToEast = models.BooleanField()
 	available = models.BooleanField()
 	def __str__(self):
 		return self.name
@@ -50,8 +52,6 @@ class Apartment(models.Model):
 	building = models.ForeignKey(Building)
 	amenities = models.ManyToManyField(Amenities)
 	description = models.TextField()
-	distanceToCity = models.BooleanField()
-	distanceToEast = models.BooleanField()
 	price = models.IntegerField()
 	leasingOptions = models.CharField()
 	bedrooms = models.CharField()
