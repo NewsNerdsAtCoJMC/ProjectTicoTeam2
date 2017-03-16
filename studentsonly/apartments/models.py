@@ -33,8 +33,11 @@ class Building(models.Model):
     distanceToCity = models.FloatField()
     distanceToEast = models.FloatField()
     available = models.BooleanField()
+    name_slug = models.SlugField(default="building-name")
     def __str__(self):
         return self.name
+    def get_absolute_url(self):
+        return "/buildings/%s" % self.name_slug
 
 class Apartment(models.Model):
     nickname = models.CharField(max_length=255)
@@ -58,7 +61,7 @@ class People(models.Model):
     major = models.CharField(max_length=255)
     
 class Reviews(models.Model):
-    apartment = models.ForeignKey(Building)
+    building = models.ForeignKey(Building)
     author = models.ForeignKey(People)
     comment = models.TextField()
     hospitality = models.PositiveIntegerField() 
