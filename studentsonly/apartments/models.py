@@ -51,7 +51,7 @@ class Apartment(models.Model):
 
 class People(models.Model):
     email = models.CharField(max_length=255)
-    apartmentPreferences = models.ManyToManyField(Apartment) #search
+    #apartmentPreferences = models.ManyToManyField(Apartment) #can do later
     profile = models.ForeignKey(Profile)
     phone = models.CharField(max_length=20)
     birthday = models.DateField()
