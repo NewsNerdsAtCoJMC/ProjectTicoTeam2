@@ -14,7 +14,8 @@ def building(request, building_slug):
     
     
 #list apartments in a given building
-def apartments(request, 
+def apartments(request, THING):
+    do something here
 
 
 
