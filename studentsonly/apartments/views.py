@@ -8,6 +8,10 @@ def index(request): #List Apartments
     context = {'aptList':aptList} #creates a dictionary
     return render(request, 'apartments/index.html', context)
     
+def buildingList(request)
+    aptList = Apartment.objects.all()
+    context =  {'aptList':aptList} 
+    return render(request, 'apartments/index.html', context)
     
 #a page for a specific building and list all available apartments and all reviews
 def building(request, building_slug): #Building detail
