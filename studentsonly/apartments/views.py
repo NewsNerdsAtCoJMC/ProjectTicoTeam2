@@ -9,7 +9,7 @@ def index(request): #List Apartments
     return render(request, 'apartments/index.html', context)
     
 def buildingList(request)
-    aptList = Apartment.objects.all()
+    aptList = Building.objects.all()
     context =  {'aptList':aptList} 
     return render(request, 'apartments/index.html', context)
     
@@ -20,7 +20,13 @@ def building(request, building_slug): #Building detail
     allApts = Apartment.objects.filter(building__name_slug=building_slug) 
     score = Reviews.objects.filter(building__name_slug=building_slug).aggregate(Avg('rating'))#annotate or aggrogate
     context = {'building':building, 'allReviews':allReviews, 'allApts':allApts, 'score':score}
+    return render(request, 'apartments/building.html')
 
+def apartmentListing(request, apartment_slug)
+    listing = Apartment.objects.get(id=apartment_slug)
+    context = {'listing': listing}
+    return render(request, 'template here', context)
+    
 
     
 
