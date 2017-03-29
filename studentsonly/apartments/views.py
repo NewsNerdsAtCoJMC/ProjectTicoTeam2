@@ -22,14 +22,10 @@ def building(request, building_slug): #Building detail
     context = {'building':building, 'allReviews':allReviews, 'allApts':allApts, 'score':score}
     return render(request, 'apartments/building.html')
 
-<<<<<<< HEAD
-    
-=======
 def apartmentListing(request, apartment_slug)
     listing = Apartment.objects.get(id=apartment_slug)
     context = {'listing': listing}
     return render(request, 'template here', context)
->>>>>>> origin/master
     
 
     
