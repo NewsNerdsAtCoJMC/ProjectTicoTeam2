@@ -8,7 +8,7 @@ def index(request): #List Apartments
     context = {'aptList':aptList} #creates a dictionary
     return render(request, 'apartments/index.html', context)
     
-def buildingList(request)
+def buildingList(request):
     buildingList = Building.objects.all()
     context = {'aptList':aptList} 
     return render(request, 'template here', context)
@@ -22,7 +22,7 @@ def building(request, building_slug): #Building detail
     context = {'building':building, 'allReviews':allReviews, 'allApts':allApts, 'score':score}
     return render(request, 'template here', context)
 
-def apartmentListing(request, apartment_slug)
+def apartmentListing(request, apartment_slug):
     listing = Apartment.objects.get(id=apartment_slug)
     context = {'listing': listing}
     return render(request, 'template here', context)
