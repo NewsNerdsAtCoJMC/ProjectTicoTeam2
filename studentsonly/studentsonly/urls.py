@@ -22,6 +22,6 @@ urlpatterns = [
     url(r'^S', views.index, name='index'),
     url(r'^S', views.buildingList, name='buildingList'),
     url(r'^building/(?P<building_slug>[-\w]+)', views.building, name='building'),
-    url(r'^apartments/(?P<apartment_slug>[-\w]+)', views.apartment, name='apartment'),
+    url(r'^apartments/(?P<apartment_slug>[-\w]+)', views.apartmentListing, name='apartment'),
     url(r'^admin/', admin.site.urls),
 ]
