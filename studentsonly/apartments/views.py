@@ -9,9 +9,9 @@ def index(request): #List Apartments
     return render(request, 'apartments/index.html', context)
     
 def buildingList(request)
-    aptList = Building.objects.all()
-    context =  {'aptList':aptList} 
-    return render(request, 'apartments/index.html', context)
+    buildingList = Building.objects.all()
+    context = {'aptList':aptList} 
+    return render(request, 'template here', context)
     
 #a page for a specific building and list all available apartments and all reviews
 def building(request, building_slug): #Building detail
@@ -20,7 +20,7 @@ def building(request, building_slug): #Building detail
     allApts = Apartment.objects.filter(building__name_slug=building_slug) 
     score = Reviews.objects.filter(building__name_slug=building_slug).aggregate(Avg('rating'))#annotate or aggrogate
     context = {'building':building, 'allReviews':allReviews, 'allApts':allApts, 'score':score}
-    return render(request, 'apartments/building.html')
+    return render(request, 'template here', context)
 
 def apartmentListing(request, apartment_slug)
     listing = Apartment.objects.get(id=apartment_slug)
