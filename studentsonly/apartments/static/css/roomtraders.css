@@ -1,0 +1,233 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+	font-family: sans-serif;
+}
+
+h1 {text-shadow: -3px 0 #FEFDFA, 0 3px #FEFDFA, 3px 0 #FEFDFA, 0 -3px #FEFDFA; }
+
+
+form {
+	background-color: #FEFDFA
+		;
+	margin-left: 10%;
+	margin-right:10%;
+	margin-top:3%;
+	margin-bottom: 3%;
+	border-color: #D00000;
+	border-style: solid;
+	padding: 2%
+}
+
+form h4 {
+	color:#D00000;
+}
+
+input {
+	border-style: solid;
+	border-color:#D00000;
+	margin-bottom: 20%
+}
+
+.husker_N {padding-left: 20%;
+}
+
+h2 {
+	color: #D00000;
+	margin-top:50%;
+}
+
+
+
+body {
+	background-color: #CCC;
+	padding: 0;
+	margin: 0;
+}
+
+img {
+	max-width:100%;
+}
+
+.login a {
+		margin-bottom: 0;
+		margin-top: 20%;
+		}
+
+.bottomEntry {
+	margin-bottom:20%
+}
+
+.rightEntry {
+	margin-right:50%;
+}
+
+.heading {
+	color: #D00000;
+	text-align: center;
+	font-size: 30px;
+	margin: 0;
+	padding: 0;
+}
+
+.logo, .heading {
+	background-color: #CCC;
+	padding: 0;
+	margin: 0;
+}
+
+.map {
+	text-align: center;
+	padding-top: 50px;
+	max-width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+.recent {
+	text-align: center;
+	background-color: #D00000;
+	color: #FEFDFA;
+	padding: 0;
+	margin: 0;
+}
+
+.photolisting {
+	text-align: center;
+	padding: 0;
+	margin: 1em;
+	float: left;
+}
+
+.info h2, h4, p {
+	text-align: left;
+	padding-left: 2em;
+	margin: 2em 1em 0 2em;
+	background-color: #FEFDFA;
+}
+
+.listing {
+	background-color: #FEFDFA;
+	margin: 0;
+	padding: 0;
+}
+
+.listinginfo h2, h4, p {
+	padding: 0;
+	margin: 0;
+}
+
+/* Nav */
+
+.nav ul {
+      list-style: none;
+      background-color: #999;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+}
+
+.nav li {
+      font-family: sans-serif;
+      font-size: 1.2em;
+      line-height: 40px;
+      height: 40px;
+      border-bottom: 1px solid #888;
+}
+
+.nav a {
+      text-decoration: none;
+      color: #FEFDFA;
+	  display: block;
+}
+
+.nav a:hover {
+      background-color: #D00000;
+}
+
+.nav a.active {
+      background-color: #FEFDFA;
+      color: #444;
+}
+
+/*Media Queries*/
+
+@media screen and (min-width: 600px) {
+	.nav li {
+      width: 200px;
+      border-bottom: none;
+      height: 50px;
+      line-height: 50px;
+      font-size: 1.4em;
+  }
+		
+}
+@media screen and (max-width: 950px) {
+	.col-xs-3 {max-width: 100%; text-align: center;}
+	.col-xs-6 {max-width: 100%;
+	text-align: center;}
+	#skers_N {display: none;}
+	form {text-align: center;}
+}
+
+.nav li {
+      display: inline-block;
+	  margin-right: -4px;
+}
+
+/* Stlyes */
+
+.button {
+	background-color: #D00000;
+    border-style: solid;
+	border-color: #FEFDFA;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+	
+}
+.submit_button {
+	background-color: #FEFDFA;
+    border-style: solid;
+	border-color: #D00000;
+    color: #D00000;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.continue p {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+.mapphoto {
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+.location {
+	position: absolute;
+	top: 60px;
+	left: 80px;
+}
+
+/* Grid */
+.container-fluid {
+	max-width: 1200px;
+	background-color: #CCC;
+	padding: 0;
+}
+
