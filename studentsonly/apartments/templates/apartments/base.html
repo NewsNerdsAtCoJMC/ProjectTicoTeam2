@@ -1,0 +1,96 @@
+{% block base %}
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Room Traders</title>
+<meta name="description" content="">
+        
+
+<!--Icons -->
+    <!-- Make iOS icon 152x152 -->
+    <link rel="apple-touch-icon" href="#">
+    <!-- Make Shortcut icon 32x32 -->
+    <link rel="shortcut icon" href="#">
+
+    
+<!-- Needed for RWD -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+<!-- Styles -->
+	<link href="css/flexboxgrid.min.css" rel="stylesheet">
+    <link href="css/roomtraders.css" rel="stylesheet">
+    <style type="text/css">
+         
+    </style>
+    
+    
+<!-- jQuery Scripts -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+    
+		});
+    </script>
+
+</head>
+
+<body>   
+<div class="container-fluid">
+
+<!-- this is the logo in the heading -->
+<div class="row">
+	<div class="col-xs-3">
+    	<div class="logo">
+    		<a href="#"><img src="images/roomtraderslogo.png"></a>
+        </div>
+    </div>    
+
+<!-- this is the text "Roomtraders" in the heading -->    
+    <div class="col-xs-6">
+    	<div class="heading">
+    		<h1>Room Traders</h1>
+         </div>
+    </div>
+    
+<!-- this is the login button in the heading -->    
+    <div class="col-xs-3">
+    	<div class="login">
+    		<a href="unl_login.html" class="button">UNL Login</a>
+        </div>    
+    </div>
+</div><!-- this closes the row -->   
+
+<!-- this is the top navigation bar -->
+<div class="row">
+	<div class="col-md-12">
+        <div class="nav">
+          <ul>
+            <li class="price"><a href="#">Price &#9661;</a></li>
+             <li class="campus"><a href="#">Campus &#9661;</a></li>
+             <li class="rooms"><a href="#">Rooms &#9661;</a></li>
+             <li class="pets"><a href="#">Pets &#9661;</a></li>
+              <li class="leaselenght"><a href="#">Lease Length &#9661;</a></li>
+              <li class="landlordrating"><a href="#">Landlord Rating &#9661;</a></li>
+           </ul>
+        </div>
+    </div>
+</div><!-- this closes the row --> 
+
+<!-- this would be the "mega dropdown" menu for the search bar. We couldn't figure out how to do a mega dropdown so we are just using this for now -->
+<div class="row">
+	<div class="col-md-12">
+        <div class="nav">
+          <ul>
+            <li class="price"><a href="listings.html">__ Min __ Max</a></li>
+             <li class="campus"><a href="listings.html">&#9744; City &#9744; East</a></li>
+             <li class="rooms"><a href="listings.html">__ Min __ Max</a></li>
+             <li class="pets"><a href="listings.html">&#9744; Yes &#9744; No</a></li>
+              <li class="leaselenght"><a href="listings.html">__ Min __ Max</a></li>
+              <li class="landlordrating"><a href="listings.html">&#9734 &#9734 &#9734 &#9734 &#9734</a></li>
+           </ul>
+        </div>
+    </div>
+</div><!-- this closes the row --> 
+{% endblock %} 
