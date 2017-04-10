@@ -1,12 +1,12 @@
-{% block base %}
+{% load static %}
+
 <!doctype html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Room Traders</title>
 <meta name="description" content="">
-        
-
+  
 <!--Icons -->
     <!-- Make iOS icon 152x152 -->
     <link rel="apple-touch-icon" href="#">
@@ -19,8 +19,8 @@
 
     
 <!-- Styles -->
-	<link href="css/flexboxgrid.min.css" rel="stylesheet">
-    <link href="css/roomtraders.css" rel="stylesheet">
+	<link href="/static/css/flexboxgrid.min.css" rel="stylesheet">
+    <link href="/static/css/roomtraders.css" rel="stylesheet">
     <style type="text/css">
          
     </style>
@@ -43,7 +43,7 @@
 <div class="row">
 	<div class="col-xs-3">
     	<div class="logo">
-    		<a href="#"><img src="images/roomtraderslogo.png"></a>
+    	<a href="#"><img src="/static/images/roomtraderslogo.png"></a>
         </div>
     </div>    
 
@@ -93,4 +93,7 @@
         </div>
     </div>
 </div><!-- this closes the row --> 
-{% endblock %} 
+{% block content %}{% endblock %}
+</div><!--close container --> 
+</body>
+</html>

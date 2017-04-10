@@ -48,6 +48,8 @@ class Apartment(models.Model):
     bedrooms = models.PositiveIntegerField()
     def __str__(self):
         return self.nickname
+    def get_absolute_url(self):
+        return "/apartments/listing/%s" % self.id
 
 class People(models.Model):
     email = models.CharField(max_length=255)
@@ -70,4 +72,3 @@ class Reviews(models.Model):
     overall = models.PositiveIntegerField()
     def __str__(self):
         return "%s" % self.overall
-        

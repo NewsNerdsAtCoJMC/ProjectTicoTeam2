@@ -22,10 +22,17 @@ def building(request, building_slug): #Building detail
     context = {'building':building, 'allReviews':allReviews, 'allApts':allApts, 'score':score}
     return render(request, 'template here', context)
 
-def apartmentListing(request, apartment_slug):
-    listing = Apartment.objects.get(id=apartment_slug)
+#def apartmentListing(request, apartment_slug):
+#    listing = Apartment.objects.get(id=apartment_slug)
+#    context = {'listing': listing}
+#    return render(request, 'template here', context)
+    
+def apartmentDetail(request, listing_id):
+    listing = Apartment.objects.get(id=listing_id)
     context = {'listing': listing}
-    return render(request, 'template here', context)
+    return render(request, 'apartments/detail.html', context)
+    
+    
     
 
     

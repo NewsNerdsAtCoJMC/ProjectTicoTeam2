@@ -19,9 +19,10 @@ from django.contrib import admin
 from apartments import views
 
 urlpatterns = [
-    url(r'^S', views.index, name='index'),
-    url(r'^S', views.buildingList, name='buildingList'),
+    url(r'^$', views.index, name='index'),
+    #url(r'^$', views.buildingList, name='buildingList'),
     url(r'^building/(?P<building_slug>[-\w]+)', views.building, name='building'),
-    url(r'^apartments/(?P<apartment_slug>[-\w]+)', views.apartmentListing, name='apartment'),
+    #url(r'^apartments/(?P<apartment_slug>[-\w]+)', views.apartmentListing, name='apartment'),
+    url(r'^apartments/listing/(?P<listing_id>[-\w]+)', views.apartmentDetail, name='detail'),
     url(r'^admin/', admin.site.urls),
 ]

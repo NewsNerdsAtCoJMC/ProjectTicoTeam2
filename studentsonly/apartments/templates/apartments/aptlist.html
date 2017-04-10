@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% for apartment in apartments %}
+<h2>
+  <a href="{{ story.get_absolute_url }}">
+    {{ story.headline|upper }}
+  </a>
+</h2>
+<p>{{ story.tease|truncatewords:"100" }}</p>
+{% endfor %}
+{%endblock%}
