@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 class Profile(models.Model):
     noise = models.PositiveIntegerField() #5: ok with loud music, 1: need silence
@@ -37,7 +38,7 @@ class Building(models.Model):
     def __str__(self):
         return self.name
     def get_absolute_url(self):
-        return "/buildings/%s" % self.name_slug
+        return "/building/%s" % self.name_slug
 
 class Apartment(models.Model):
     nickname = models.CharField(max_length=255)
@@ -52,6 +53,7 @@ class Apartment(models.Model):
         return "/apartments/listing/%s" % self.id
 
 class People(models.Model):
+    user = models.ForeignKey(User)
     email = models.CharField(max_length=255)
     #apartmentPreferences = models.ManyToManyField(Apartment) #can do later
     profile = models.ForeignKey(Profile)

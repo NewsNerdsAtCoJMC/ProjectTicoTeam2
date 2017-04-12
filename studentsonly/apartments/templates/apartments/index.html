@@ -11,7 +11,9 @@
         	<a href="{{ object.get_absolute_url }}"><img src="static/images/house1.jpg"></a>
         </div>
     	<div class="info">
-        	<h2><a href="{{ object.get_absolute_url }}">${{ object.price}}/month</a></h2><h4>{{ object.nickname }}</h4><p>{{ object.description }}</p>
+        	<h2><a href="{{ object.get_absolute_url }}">${{ object.price}}/month</a></h2><h4>{{ object.nickname }}</h4>
+            <p>in <a href="{{ object.building.get_absolute_url }}">{{ object.building }}</a></p>
+            <p>{{ object.description }}</p>
         </div>
     </div>
 </div><!-- this closes the row --> 

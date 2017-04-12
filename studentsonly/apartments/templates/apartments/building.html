@@ -2,8 +2,21 @@
 
 {% block content %}
 
-
-
+<div class="row">
+	<div class="col-xs-12" style="background-color:white;">
+    	<div class="photobuilding">
+        	<a href="{{ building.get_absolute_url }}"><img src="/static/images/house1.jpg"></a>
+        </div>
+    	<div class="info">
+        	<h2><a href="{{ building.get_absolute_url }}">${{ building.price}}/month</a></h2>
+            <h4>{{ building.name }}</h4>
+            <p>{{ building.address }}</p>
+            <p>{{ building.rating }} stars</p>
+            <p>{{ building.distanceToCity }} to city campus</p>
+            <p>{{ building.contactInfo }}</p>
+        </div>
+    </div>
+</div><!-- this closes the row --> 
 
 
 {%endblock%}
