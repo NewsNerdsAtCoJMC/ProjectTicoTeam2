@@ -7,10 +7,15 @@
 <div class="row">
 	<div class="col-xs-12" style="background-color:white;">
     	<div class="photolisting">
-        	<a href="{{ listing.get_absolute_url }}"><img src="static/images/house1.jpg"></a>
+        	<a href="{{ listing.get_absolute_url }}"><img src="/static/images/house1.jpg"></a>
         </div>
     	<div class="info">
-        	<h2><a href="{{ listing.get_absolute_url }}">${{ listing.price}}/month</a></h2><h4>{{ listing.nickname }}</h4><p>{{ listing.description }}</p>
+        	<h2><a href="{{ listing.get_absolute_url }}">${{ listing.price}}/month</a></h2>
+            <h4>{{ listing.nickname }}</h4>
+            <p>{{ listing.description }}</p>
+            <p>in building: {{ listing.building }}</p>
+            <p>{{ listing.bedrooms }} bedrooms</p>
+            <p>Leasing Options: {{ listing.leasingOptions }}</p>
         </div>
     </div>
 </div><!-- this closes the row --> 
