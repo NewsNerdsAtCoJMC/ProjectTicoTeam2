@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.db.models import Count, Avg
-from apartments.models import People, Profile, Building, Amenities, Apartment, Reviews
+from apartments.models import Profile, Building, Amenities, Apartment, Reviews
 from apartments.forms import ApartmentForm
 
 def index(request): #List Apartments

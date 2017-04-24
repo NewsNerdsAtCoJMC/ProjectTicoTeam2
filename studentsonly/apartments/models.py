@@ -26,7 +26,7 @@ class Amenities(models.Model):
     coveredParking = models.BooleanField()
     
 class Building(models.Model):
-    image = models.ImageField(upload_to="C:\Users\apheg\Documents\GitHub\ProjectTicoTeam2\studentsonly\apartments\static\images")
+    image = models.ImageField(upload_to="media", blank=True, null=True)
     name = models.CharField(max_length=255)
     address = models.CharField(max_length=255)
     contactInfo = models.CharField(max_length=255)
@@ -48,27 +48,15 @@ class Apartment(models.Model):
     price = models.IntegerField()
     leasingOptions = models.CharField(max_length=255)
     bedrooms = models.PositiveIntegerField()
-    public = #heh
+    public = models.BooleanField(default=False)
     def __str__(self):
         return self.nickname
     def get_absolute_url(self):
         return "/apartments/listing/%s" % self.id
-
-class People(models.Model):
-    user = models.ForeignKey(User)
-    email = models.CharField(max_length=255)
-    #apartmentPreferences = models.ManyToManyField(Apartment) #can do later
-    profile = models.ForeignKey(Profile)
-    phone = models.CharField(max_length=20)
-    birthday = models.DateField()
-    firstName = models.CharField(max_length=255)
-    lastName = models.CharField(max_length=255)
-    year = models.CharField(max_length=255)
-    major = models.CharField(max_length=255)
     
 class Reviews(models.Model):
+    name = models.CharField(max_length=255)
     building = models.ForeignKey(Building)
-    author = models.ForeignKey(People)
     comment = models.TextField()
     hospitality = models.PositiveIntegerField() 
     maintenance = models.PositiveIntegerField()
