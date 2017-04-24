@@ -26,6 +26,7 @@ class Amenities(models.Model):
     coveredParking = models.BooleanField()
     
 class Building(models.Model):
+    image = models.ImageField(upload_to="C:\Users\apheg\Documents\GitHub\ProjectTicoTeam2\studentsonly\apartments\static\images")
     name = models.CharField(max_length=255)
     address = models.CharField(max_length=255)
     contactInfo = models.CharField(max_length=255)
@@ -47,6 +48,7 @@ class Apartment(models.Model):
     price = models.IntegerField()
     leasingOptions = models.CharField(max_length=255)
     bedrooms = models.PositiveIntegerField()
+    public = #heh
     def __str__(self):
         return self.nickname
     def get_absolute_url(self):

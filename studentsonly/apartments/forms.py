@@ -10,3 +10,4 @@ class ApartmentForm(ModelForm):
     class Meta:
         model = Apartment
         fields = ['nickname', 'building', 'description', 'price', 'leasingOptions', 'bedrooms']
+        
