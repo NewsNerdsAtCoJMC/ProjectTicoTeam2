@@ -8,7 +8,7 @@
 	<div class="col-xs-12" style="background-color:white;">
     <form action="/post-your-listing/" method="post">
     {% csrf_token %}
-    {{ form }}
+    {{ form.as_p }}
     <input type="submit" value="Submit" />
 </form>
 
