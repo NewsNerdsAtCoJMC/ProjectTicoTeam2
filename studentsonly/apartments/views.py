@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.db.models import Count, Avg
 from apartments.models import Profile, Building, Amenities, Apartment, Reviews
 from apartments.forms import ApartmentForm
+from apartments.forms import ReviewForm
 
 def index(request): #List Apartments
     aptList = Apartment.objects.all()#LATER (order by date-time published)
