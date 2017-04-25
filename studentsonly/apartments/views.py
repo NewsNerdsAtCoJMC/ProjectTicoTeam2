@@ -51,7 +51,7 @@ def postreview(request):
     else:
         form = ReviewForm()
         context = {'form': form}
-    return render(request, 'apartments/post.html', context)
+    return render(request, 'apartments/reviews.html', context)
     
     
 

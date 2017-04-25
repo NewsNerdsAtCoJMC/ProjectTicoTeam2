@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Post your review</h1>
+
+<div class="row">
+	<div class="col-xs-12" style="background-color:white;">
+    <form action="/post-your-review/" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit" />
+</form>
+
+    </div>
+</div><!-- this closes the row -->
+
+
+
+
+{% endblock %}
