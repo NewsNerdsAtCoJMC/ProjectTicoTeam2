@@ -7,15 +7,42 @@
 <div class="row">
 	<div class="col-xs-12" style="background-color:white;">
     	<div class="photobuilding">
-        	<a href="{{ building.get_absolute_url }}"><img src="/static/images/house1.jpg"></a>
+        	<a href="{{ building.get_absolute_url }}"><img src="/{{ building.image }}" style="width:500px"></a>
         </div>
     	<div class="info">
             <h4>{{ building.distanceToCity }} to city campus</h4>
             <p>{{ building.address }}</p>
-            <p>{{ building.rating }} stars</p>
+            <p>{{ score.overall__avg }} stars</p>
             <p>{{ building.contactInfo }}</p>
         </div>
     </div>
-</div><!-- this closes the row --> 
+</div>
+<br /><!-- this closes the row --> 
+<div class="row">
+	<div class="col-xs-12" style="background-color:white;">
+    	<div class="info">
+            {% for object in allApts %}
+            <h4>{{ object.nickname }}</h4>
+            <p></p>
+            <p></p>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<br /><!-- this closes the row --> 
+<div class="row">
+	<div class="col-xs-12" style="background-color:white;">
+    	<div class="info">
+            {% for object in allReviews %}
+            <h4>{{ object.name }}</h4>
+            <p>{{ object.comment }}</p>
+            <p>{{ object.overall }} stars</p>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
 
 {%endblock%}
