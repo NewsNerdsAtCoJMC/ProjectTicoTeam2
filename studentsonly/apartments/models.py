@@ -31,6 +31,9 @@ class Building(models.Model):
     address = models.CharField(max_length=255)
     contactInfo = models.CharField(max_length=255)
     rating = models.FloatField(default=0.0) #derived from reviews
+    #hospitality = models.FloatField(default=0.0) #derived from reviews
+    #maintenance = models.FloatField(default=0.0) #derived from reviews
+    #safety_security = models.FloatField(default=0.0) #derived from reviews
     amenities = models.ManyToManyField(Amenities)
     distanceToCity = models.FloatField()
     distanceToEast = models.FloatField()

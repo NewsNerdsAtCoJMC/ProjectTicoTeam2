@@ -26,6 +26,7 @@ urlpatterns = [
     #url(r'^apartments/(?P<apartment_slug>[-\w]+)', views.apartmentListing, name='apartment'),
     url(r'^apartments/listing/(?P<listing_id>[-\w]+)', views.apartmentDetail, name='detail'),
     url(r'^post-your-listing/$', views.postlisting, name='postlisting'),
+    url(r'^post-your-review/$', views.postReview, name='postreview'),
     url(r'^accounts/', include('registration.backends.simple.urls')),
     url(r'^admin/', admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

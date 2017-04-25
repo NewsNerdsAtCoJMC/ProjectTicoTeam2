@@ -40,6 +40,19 @@ def postlisting(request):
         context = {'form': form}
     return render(request, 'apartments/post.html', context)
     
+def postreview(request):
+    if request.method == 'POST':
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            f = form.save(commit=False)
+            f.save()
+            return redirect('/')
+    else:
+        form = ReviewForm()
+        context = {'form': form}
+    return render(request, 'apartments/post.html', context)
+    
+    
 
 
 
