@@ -1,5 +1,5 @@
 from django.forms import ModelForm
-from apartments.models import Apartment
+from apartments.models import Apartment, Reviews
 
 class ApartmentForm(ModelForm):
     class Meta:
